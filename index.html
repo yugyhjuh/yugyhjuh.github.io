@@ -1,60 +1,132 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-        <title>
-            Steph's Portfolio
-        </title>
-
-        <style>
-            /*PAGE SETTINGS*/
-            html, body
-            {
-                margin: 0;
-                height: 100%;
-                scroll-snap-type: y mandatory;
-                overflow-y: scroll;
-                scroll-behavior: smooth;
-                /*font-family: sans-serif*/
-            }
-
-            section
-            {
-                height: 100vh;
-                width: 100%;
-                scroll-snap-align: start;
-                
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                /*display: flex;
-                justify-content: center;
-                align-items: center;*/
-                transition: transform 0.6s ease-out;
-            }
-
-            .mainmenu
-            {
-                background-image: url('bg1.jpg');
-            }
-
-            .selectionmenu
-            {
-                background-image: url('bg2.svg');
-            }
-        </style>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>yugyhjuh</title>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
     </head>
 
     <body>
-        <section class = "mainmenu">
-            <h1>
-                The Tales of yugyhjuh
-            </h1>
-        </section>
-
-        <section class = "selectionmenu">
-            
-        </section>
+        <div class="layout">
+            <!-- Fixed Nav Bar (Left info stuff) -->
+             <div class="left">
+                <div class="left-top">
+                    <div class="status-dot">Available for internship<br>23Aug2026 - 03Jan2027</div>
+                    <h1 class="name">Stephanie Ho<br>Yen Yuin</h1>
+                    <p class="role">Dip. Game Design & Development<br>B.Sc. Design & AI (in progress)</p>
+                    <p class="bio">bio bio bio nom nom subdiv modif nom bio bio bio</p>
+                    <nav class="nav">
+                        <a href="#projects" class="active">Projects</a>
+                        <a href="#about">About</a>
+                    </nav>
+                </div>
+                <div class="left-bottom">
+                    <a href="https://github.com/yugyhjuh" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <p class="status">Currently @ SUTD, Year 3, Term 5</p>
+                </div>
+             </div>
+             <!-- Scrolling side (Right project showcase) -->
+             <div class="right">
+                <div class="search-bar">
+                    <span class="search-icon">⌕</span>
+                    <input type="text" id="searchInput" placeholder="Search tools/skills..." autocomplete="off" />
+                    <span class="search-clear" id="searchClear">✕</span>
+                </div>
+                <!-- Projects -->
+                <section id="projects">
+                    <div class="section-label">Projects</div>
+                    <div class="projects">
+                        <!-- Project 1 -->
+                        <a class="project-card" href="#">
+                            <div class="project-meta">
+                                <span class="project-number">01</span>
+                                <div class="project-tags">
+                                    <span class="tag">Product Design</span>
+                                    <span class="tag">Blender</span>
+                                    <span class="tag">Prototyping</span>
+                                    <span class="tag">Arduino</span>
+                                </div>
+                            </div>
+                            <h2 class="project-title">Lionsbot: Bed-making Assist Device</h2>
+                            <div class="project-types">
+                                <span class="project-type">School</span>
+                                <span class="project-type">Client</span>
+                            </div>
+                            <div class="project-image">
+                                <img src="Images/Lifty.jpg" alt="Project 1" />
+                            </div>
+                            <p class="project-desc">Brief desc of project hehe so cool did camera stuff and modelled this shit</p>
+                            <div class="project-footer">
+                                <span class="project-timeline">Jan 2026 - April 2026</span>
+                                <span class="project-link">View Project</span>
+                            </div>
+                        </a>
+                        <!-- Project 2 -->
+                         <a class="project-card" href="#">
+                            <div class="project-meta">
+                                <span class="project-number">02</span>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                    <span class="tag">Unity (C#)</span>
+                                    <span class="tag">Prototyping</span>
+                                    <span class="tag">Arduino</span>
+                                </div>
+                            </div>
+                            <h2 class="project-title">Design Thinking & Innovation</h2>
+                            <div class="project-types">
+                                <span class="project-type">School</span>
+                            </div>
+                            <div class="project-image">
+                                <video class="project-video" src="Images/Origaminah.mp4" muted loop playsinline></video>
+                            </div>
+                            <p class="project-desc"> blah balh Site model</p>
+                            <div class="project-footer">
+                                <span class="project-timeline">???</span>
+                                <span class="project-link">View Project</span>
+                            </div>
+                        </a>
+                        <!-- Project 3 -->
+                         <a class="project-card" id="project-viziofly" href="#">
+                            <div class="project-meta">
+                                <span class="project-number">03</span>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                    <span class="tag">Photoshop</span>
+                                    <span class="tag">Unity (C#)</span>
+                                    <span class="tag">CC4</span>
+                                    <span class="tag">iClone8</span>
+                                </div>
+                            </div>
+                            <h2 class="project-title">VizioFly: Internship</h2>
+                            <div class="project-types">
+                                <span class="project-type">Internship</span>
+                                <span class="project-type">Client</span>
+                            </div>
+                            <div class="project-image">
+                                <img src="Images/Building.png" alt="Project 3" />
+                            </div>
+                            <p class="project-desc">Includes multiple work done for multiple clients such as CNA, RSAF.</p>
+                            <div class="project-footer">
+                                <span class="project-timeline">Jun 2023 - Feb 2024</span>
+                                <span class="project-link">View Project</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <!-- About -->
+                <section id="about" class="about-section">
+                    <div class="section-label">About</div>
+                    <div class="about-grid">
+                        <div class="about-block">
+                            <p>hello this is where my about text will go nom nom pls fix the padding above </p>
+                        </div>
+                    </div>
+                </section>
+             </div>
+        </div>
+        <script src="script.js"></script>
     </body>
-    
 </html>
