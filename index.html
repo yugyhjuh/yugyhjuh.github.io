@@ -10,8 +10,8 @@
 
     <body>
         <div class="layout">
-            <!-- Fixed Nav Bar (Left info stuff) -->
-             <div class="left">
+            <!-- LEFT: sticky -->
+            <div class="left">
                 <div class="left-top">
                     <div class="status-dot">Available for internship<br>23Aug2026 - 03Jan2027</div>
                     <h1 class="name">Stephanie Ho<br>Yen Yuin</h1>
@@ -29,9 +29,11 @@
                     <a href="#" target="_blank">LinkedIn</a>
                     <p class="status">Currently @ SUTD, Year 3, Term 5</p>
                 </div>
-             </div>
-             <!-- Scrolling side (Right project showcase) -->
-             <div class="right">
+            </div>
+
+            <!-- RIGHT: scrolling -->
+            <div class="right">
+                <!-- Search -->
                 <div class="search-bar">
                     <span class="search-icon">⌕</span>
                     <input type="text" id="searchInput" placeholder="Search tools/skills..." autocomplete="off" />
@@ -68,7 +70,7 @@
                             </div>
                         </a>
                         <!-- Project 2 -->
-                         <a class="project-card" href="#">
+                        <a class="project-card" href="#">
                             <div class="project-meta">
                                 <span class="project-number">02</span>
                                 <div class="project-tags">
@@ -86,14 +88,14 @@
                             <div class="project-image">
                                 <video class="project-video" src="Images/Origaminah.mp4" muted loop playsinline></video>
                             </div>
-                            <p class="project-desc"> blah balh Site model</p>
+                            <p class="project-desc">blah balh Site model</p>
                             <div class="project-footer">
                                 <span class="project-timeline">???</span>
                                 <span class="project-link">View Project</span>
                             </div>
                         </a>
                         <!-- Project 3 -->
-                         <a class="project-card" id="project-viziofly" href="#">
+                        <a class="project-card" id="project-viziofly" href="#">
                             <div class="project-meta">
                                 <span class="project-number">03</span>
                                 <div class="project-tags">
@@ -111,7 +113,7 @@
                                 <span class="project-type">Client</span>
                             </div>
                             <div class="project-image">
-                                <img src="Images/Building.png" alt="Project 3" />
+                                <img src="Images/Building.png" alt="Project 3" />losechickenoverlay
                             </div>
                             <p class="project-desc">Includes multiple work done for multiple clients such as CNA, RSAF.</p>
                             <div class="project-footer">
@@ -120,7 +122,7 @@
                             </div>
                         </a>
                         <!-- Project 4 -->
-                         <a class="project-card" href="#">
+                        <a class="project-card"href="#">
                             <div class="project-meta">
                                 <span class="project-number">04</span>
                                 <div class="project-tags">
@@ -136,7 +138,7 @@
                                 <span class="project-type">School</span>
                             </div>
                             <div class="project-image">
-                                <img src="#" alt="Project 4" />
+                                <img src="Images/sp.png" alt="Project 4" />
                             </div>
                             <p class="project-desc">UI, model, texture</p>
                             <div class="project-footer">
@@ -145,7 +147,7 @@
                             </div>
                         </a>
                         <!-- Project 5 -->
-                         <a class="project-card" href="#">
+                        <a class="project-card" id="project-lyf" href="#">
                             <div class="project-meta">
                                 <span class="project-number">05</span>
                                 <div class="project-tags">
@@ -161,36 +163,98 @@
                                 <span class="project-type">Client</span>
                             </div>
                             <div class="project-image">
-                                <iframe
-                                    src="https://xd.adobe.com/view/753ef9f2-876f-4d55-903f-30b469f00bee-206d/?fullscreen" 
-                                    width="100%" 
-                                    height="600px" 
-                                    frameborder="0" 
+                                <img src="Images/Lyf.jpg" alt="Project 4" />
+                                <!--<iframe
+                                    src="https://xd.adobe.com/view/753ef9f2-876f-4d55-903f-30b469f00bee-206d/?fullscreen"
+                                    width="100%"
+                                    height="100%"
+                                    frameborder="0"
                                     allowfullscreen>
-                                </iframe>
+                                </iframe>-->
                             </div>
                             <p class="project-desc">lyfff</p>
                             <div class="project-footer">
-                                <span class="project-timeline">Oct 2022 - Feb 2023 </span>
+                                <span class="project-timeline">Oct 2022 - Feb 2023</span>
+                                <span class="project-link">View Project</span>
+                            </div>
+                        </a>
+                        <!-- TP PROJECTS (make it one big pic on its own) -->
+                        <a class="project-card" id="project-tp" href="#">
+                            <div class="project-meta">
+                                <span class="project-number">06</span>
+                                <div class="project-tags">
+                                    <span class="tag">Android Studio (Java)</span>
+                                    <span class="tag">Adobe XD</span>
+                                    <span class="tag">Prototyping</span>
+                                    <span class="tag">Web Development (HTML/CSS/JS | MySQL/Postman)</span>
+                                </div>
+                            </div>
+                            <h2 class="project-title">Temasek Poly: Dev Projects</h2>
+                            <div class="project-types">
+                                <span class="project-type">Individual</span>
+                                <span class="project-type">School</span>
+                            </div>
+                            <div class="project-image">
+                                <img src="Images/#" alt="Project 4" />
+                                <!--<iframe
+                                    src="https://xd.adobe.com/view/753ef9f2-876f-4d55-903f-30b469f00bee-206d/?fullscreen"
+                                    width="100%"
+                                    height="100%"
+                                    frameborder="0"
+                                    allowfullscreen>
+                                </iframe>-->
+                            </div>
+                            <p class="project-desc">tp stuff throughout my years</p>
+                            <div class="project-footer">
+                                <span class="project-timeline">2021-2024?</span>
                                 <span class="project-link">View Project</span>
                             </div>
                         </a>
                     </div>
+                </section>
                 <!-- Personal Projects -->
-                <section id ="personal" class="personal-section">
-                    <div class="section-label">Personal Projects</div>
-                    <div class="personal-grid">
-                        <div class="personal-block">
-                            <p>projjsjs </p>
+                <section id="personal" class="personal-section">
+                <div class="section-label">Explorations</div>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" onclick="scrollCarousel(-1)">←</button>
+                    <div class="carousel" id="personalCarousel">
+                    <div class="personal-card" onclick="openModal('modal-personal-1')">
+                        <div class="personal-image">
+                        <div class="placeholder">Project image</div>
+                        </div>
+                        <div class="personal-info">
+                        <span class="personal-title">Game Jam Project 1</span>
+                        <span class="personal-open">View →</span>
                         </div>
                     </div>
+                    <div class="personal-card" onclick="openModal('modal-personal-2')">
+                        <div class="personal-image">
+                        <div class="placeholder">Project image</div>
+                        </div>
+                        <div class="personal-info">
+                        <span class="personal-title">Hackathon Project 1</span>
+                        <span class="personal-open">View →</span>
+                        </div>
+                    </div>
+                    <div class="personal-card" onclick="openModal('modal-personal-3')">
+                        <div class="personal-image">
+                        <div class="placeholder">Project image</div>
+                        </div>
+                        <div class="personal-info">
+                        <span class="personal-title">Game Jam Project 2</span>
+                        <span class="personal-open">View →</span>
+                        </div>
+                    </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" onclick="scrollCarousel(1)">→</button>
+                </div>
                 </section>
                 <!-- About -->
                 <section id="about" class="about-section">
                     <div class="section-label">About</div>
                     <div class="about-grid">
                         <div class="about-block">
-                            <p>hello this is where my about text will go nom nom pls fix the padding above </p>
+                            <p>hello this is where my about text will go nom nom pls fix the padding above</p>
                         </div>
                     </div>
                 </section>
@@ -198,19 +262,83 @@
                 <section id="testimonials" class="testimonials-section">
                     <div class="section-label">Testimonials</div>
                     <div class="testimonials-grid">
-                        <div class="testimonial-block">
+                        <div class="testimonial-card" onclick="openModal('modal-testimonial-1')">
+                            <div class="testimonial-icon">PDF</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Nasri Samat</span>
+                                <span class="testimonial-role">Supervisor, Viziofly</span>
+                            </div>
+                            <span class="testimonial-open">View →</span>
+                        </div>
+                        <div class="testimonial-card" onclick="openModal('modal-testimonial-2')">
+                            <div class="testimonial-icon">PDF</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Dr Nalaka</span>
+                                <span class="testimonial-role">Deputy Director, Temasek Polytechnic</span>
+                            </div>
+                            <span class="testimonial-open">View →</span>
                         </div>
                     </div>
                 </section>
-             </div>
+            </div>
         </div>
-        <script src="script.js"></script>
-    </body>
-</html>
-                        </div>
-                    </div>
-                </section>
-             </div>
+        <!-- Personal Proj POPUP 1 -->
+        <div class="modal" id="modal-personal-1">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <span class="modal-title">Personal Project 1</span>
+                    <button class="modal-close" onclick="closeModal('modal-personal-1')">✕</button>
+                </div>
+                <div class="modal-scroll-x">
+                    <div class="modal-slide"><div class="placeholder">Image 1</div></div>
+                    <div class="modal-slide"><div class="placeholder">Image 2</div></div>
+                    <div class="modal-slide"><div class="placeholder">Image 3</div></div>
+                </div>
+                <div class="modal-desc">
+                    <p>Description of personal project 1.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Personal Proj POPUP 2 -->
+        <div class="modal" id="modal-personal-2">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <span class="modal-title">Personal Project 2</span>
+                    <button class="modal-close" onclick="closeModal('modal-personal-2')">✕</button>
+                </div>
+                <div class="modal-scroll-x">
+                    <div class="modal-slide"><div class="placeholder">Image 1</div></div>
+                    <div class="modal-slide"><div class="placeholder">Image 2</div></div>
+                </div>
+                <div class="modal-desc">
+                    <p>Description of personal project 2.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial POPUP 1-->
+        <div class="modal" id="modal-testimonial-1">
+            <div class="modal-box modal-box-pdf">
+                <div class="modal-header">
+                    <span class="modal-title">Testimonial - Nasri Samat</span>
+                    <button class="modal-close" onclick="closeModal('modal-testimonial-1')">✕</button>
+                </div>
+                <div class="modal-pdf">
+                    <iframe src="Testimonials/testimonial1.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial POPUP 2-->
+        <div class="modal" id="modal-testimonial-2">
+            <div class="modal-box modal-box-pdf">
+                <div class="modal-header">
+                    <span class="modal-title">Testimonial - Dr Nalaka</span>
+                    <button class="modal-close" onclick="closeModal('modal-testimonial-2')">✕</button>
+                </div>
+                <div class="modal-pdf">
+                    <iframe src="Testimonials/testimonial2.pdf"></iframe>
+                </div>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>

@@ -1,79 +1,100 @@
-//dict for search
-  const synonyms = {
-    'Blender': [
-      '3d',
-      'model',
-      'animation',
-      'texture'
-    ],
+// dict for search
+const synonyms = {
+  'Blender': [
+    '3d',
+    'model',
+    'animation',
+    'texture'
+  ],
 
-    'unity (c#)': [
-      'game',
-      'gaming'
-    ],
-    
-    'iClone8': [
-      'animation'
-    ],
-    
-    'CC4': [
-      '3d',
-      'model'
-    ],
-    
-    'Prototyping': [
-      'prototype'
-    ],
+  'Unity (C#)': [
+    'game',
+    'gaming'
+  ],
 
-    'Photoshop': [
-      'texture'
-    ],
+  'iClone8': [
+    'animation'
+  ],
 
-    'Arduino': [
-      'electronics',
-      'wiring',
-      'hardware'
-    ],
-    
-    'Adobe XD': [
-      'UI',
-      'UX',
-      'UI/UX',
-      'hi-fidelity',
-      'low-fidelity',
-      'wireframe',
-      'hi-fi',
-      'lo-fi'
-    ]
-  };
+  'CC4': [
+    '3d',
+    'model'
+  ],
 
-//search logic
+  'Prototyping': [
+    'prototype'
+  ],
+
+  'Photoshop': [
+    'texture'
+  ],
+
+  'Arduino': [
+    'electronics',
+    'wiring',
+    'hardware'
+  ],
+
+  'Adobe XD': [
+    'ui',
+    'ux',
+    'ui/ux',
+    'hi-fidelity',
+    'low-fidelity',
+    'wireframe',
+    'hi-fi',
+    'lo-fi',
+    'user'
+  ],
+
+  'Krita': [
+    '2d',
+    'concept art',
+    'art',
+    'drawing'
+  ]
+};
+
 const searchInput = document.getElementById('searchInput');
 const searchClear = document.getElementById('searchClear');
 const cards = document.querySelectorAll('.project-card');
 
+function normalizeWords(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .split(/\s+/);
+}
+
 function getMatchingTags(query) {
-  query = query.toLowerCase().trim();
-  if (!query) return new Set();
+  const words = normalizeWords(query);
 
-  let matches = new Set();
+  if (!query.trim()) return new Set();
 
-  //direct match
+  const matches = new Set();
+
+  //direct tag matching
   cards.forEach(card => {
     card.querySelectorAll('.tag').forEach(tag => {
-      if (tag.textContent.toLowerCase().includes(query)) {
-        matches.add(tag.textContent.toLowerCase());
-      }
+      const tagText = tag.textContent.toLowerCase();
+
+      words.forEach(word => {
+        if (tagText.includes(word)) {
+          matches.add(tagText);
+        }
+      });
     });
   });
 
-  //keyword match (from dict)
+  //synonym matching
   Object.entries(synonyms).forEach(([mainTag, aliasList]) => {
-    const allTerms = [mainTag, ...aliasList];
+    const allTerms = [mainTag.toLowerCase(), ...aliasList.map(a => a.toLowerCase())];
 
-    if (allTerms.some(term => query.includes(term.toLowerCase()))) {
-      matches.add(mainTag.toLowerCase());
-    }
+    words.forEach(word => {
+      if (allTerms.some(term => term.includes(word))) {
+        matches.add(mainTag.toLowerCase());
+      }
+    });
   });
 
   return matches;
@@ -85,65 +106,161 @@ function runSearch(query) {
   searchClear.classList.toggle('visible', query.length > 0);
 
   cards.forEach(card => {
-    if (!query) {
+    if (!query.trim()) {
       card.classList.remove('hidden');
-      card.querySelectorAll('.tag').forEach(t => t.classList.remove('highlighted'));
+
+      card.querySelectorAll('.tag').forEach(tag => {
+        tag.classList.remove('highlighted');
+      });
+
       return;
     }
 
     let cardMatches = false;
+
     card.querySelectorAll('.tag').forEach(tag => {
       const tagText = tag.textContent.toLowerCase();
-      //highlight the matching ones
+
       const isMatch = matchingTags.has(tagText);
+
       tag.classList.toggle('highlighted', isMatch);
-      if (isMatch) cardMatches = true;
+
+      if (isMatch) {
+        cardMatches = true;
+      }
     });
 
     card.classList.toggle('hidden', !cardMatches);
   });
 }
 
-searchInput.addEventListener('input', () => runSearch(searchInput.value));
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    runSearch(searchInput.value);
+  });
+}
 
-searchClear.addEventListener('click', () => {
-  searchInput.value = '';
-  runSearch('');
-  searchInput.focus();
-});
+if (searchClear) {
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    runSearch('');
+    searchInput.focus();
+  });
+}
 
-//scroll (slide into view)
+//anim of revealing on scroll
+const revealTargets = document.querySelectorAll('.project-card, .section');
+
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 80);
     }
   });
-}, { threshold: 0.1 });
-
-cards.forEach(card => revealObserver.observe(card));
-
-//video thumbnails
-document.querySelectorAll('.project-card').forEach(card => {
-  const video = card.querySelector('video');
-  if (!video) return;
-  card.addEventListener('mouseenter', () => video.play());
-  card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+}, {
+  threshold: 0.1
+});
+revealTargets.forEach(target => {
+  revealObserver.observe(target);
 });
 
-//nav link
+//video play on hover
+document.querySelectorAll('.project-card').forEach(card => {
+  const video = card.querySelector('video');
+
+  if (!video) return;
+
+  card.addEventListener('mouseenter', () => {
+    video.play();
+  });
+
+  card.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+});
+
+//nav active state on click and scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav a');
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 200) current = s.id;
+//click state
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
   });
-  navLinks.forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.forEach(l => l.classList.remove('active'));
-      a.classList.add('active');
-    });
+});
+
+//scroll state
+window.addEventListener('scroll', () => {
+  let currentSection = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+
+    if (window.scrollY >= sectionTop - 200) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+
+    if (link.getAttribute('href') === `#${currentSection}`) {
+      link.classList.add('active');
+    }
   });
 }, { passive: true });
+
+//box modals popup
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+
+  if (!modal) return;
+
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+
+  if (!modal) return;
+
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+//close on backdrop click
+document.querySelectorAll('.modal').forEach(modal => {
+  modal.addEventListener('click', event => {
+    if (event.target === modal) {
+      closeModal(modal.id);
+    }
+  });
+});
+
+//close on ESC key
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    document.querySelectorAll('.modal.active').forEach(modal => {
+      closeModal(modal.id);
+    });
+  }
+});
+
+//exploration carousel display sideways
+function scrollCarousel(direction) {
+  const carousel = document.getElementById('personalCarousel');
+
+  if (!carousel) return;
+
+  const scrollAmount = carousel.clientWidth * 0.8;
+
+  carousel.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
