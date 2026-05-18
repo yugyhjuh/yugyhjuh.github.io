@@ -31,9 +31,19 @@
 
     'Arduino': [
       'electronics',
-      'wire',
       'wiring',
       'hardware'
+    ],
+    
+    'Adobe XD': [
+      'UI',
+      'UX',
+      'UI/UX',
+      'hi-fidelity',
+      'low-fidelity',
+      'wireframe',
+      'hi-fi',
+      'lo-fi'
     ]
   };
 
