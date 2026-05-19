@@ -28,6 +28,9 @@
                     <a href="#" target="_blank">LinkedIn</a>
                     <p class="status">Currently @ SUTD, Year 3, Term 5</p>
                 </div>
+                <a href="javascript:void(0)" onclick="openModal('modal-info')" class="nav-info">
+                    ⚠ Portfolio Status
+                </a>
             </div>
             <!-- RIGHT: scrolling -->
             <div class="right">
@@ -93,9 +96,33 @@
                             </div>
                         </a>
                         <!-- Project 3 -->
-                        <a class="project-card" id="project-viziofly" href="#">
+                        <a class="project-card" href="#">
                             <div class="project-meta">
                                 <span class="project-number">03</span>
+                                <div class="project-tags">
+                                    <span class="tag">Rhino 7/8</span>
+                                    <span class="tag">FORMAS.AI</span>
+                                </div>
+                            </div>
+                            <h2 class="project-title">Spatial Design Studio</h2>
+                            <div class="project-types">
+                                <span class="project-type">Individual</span>
+                                <span class="project-type">Group</span>
+                                <span class="project-type">School</span>
+                            </div>
+                            <div class="project-image">
+                                <img class="project-video" src="Images/EXE1.gif" alt="Project animation" style=object-fit:cover;>
+                            </div>
+                            <p class="project-desc">blah balh Site model</p>
+                            <div class="project-footer">
+                                <span class="project-timeline">???</span>
+                                <span class="project-link">View Project</span>
+                            </div>
+                        </a>
+                        <!-- Project 4 -->
+                        <a class="project-card" id="project-viziofly" href="#">
+                            <div class="project-meta">
+                                <span class="project-number">04</span>
                                 <div class="project-tags">
                                     <span class="tag">Blender</span>
                                     <span class="tag">Photoshop</span>
@@ -119,10 +146,10 @@
                                 <span class="project-link">View Project</span>
                             </div>
                         </a>
-                        <!-- Project 4 -->
+                        <!-- Project 5 -->
                         <a class="project-card"href="#">
                             <div class="project-meta">
-                                <span class="project-number">04</span>
+                                <span class="project-number">05</span>
                                 <div class="project-tags">
                                     <span class="tag">Maya</span>
                                     <span class="tag">Adobe XD</span>
@@ -144,10 +171,10 @@
                                 <span class="project-link">View Project</span>
                             </div>
                         </a>
-                        <!-- Project 5 -->
+                        <!-- Project 6 -->
                         <a class="project-card" id="project-lyf" href="#">
                             <div class="project-meta">
-                                <span class="project-number">05</span>
+                                <span class="project-number">06</span>
                                 <div class="project-tags">
                                     <span class="tag">Krita</span>
                                     <span class="tag">Adobe XD</span>
@@ -179,7 +206,7 @@
                         <!-- TP PROJECTS (make it one big pic on its own) -->
                         <a class="project-card" id="project-tp" href="#">
                             <div class="project-meta">
-                                <span class="project-number">06</span>
+                                <span class="project-number">07</span>
                                 <div class="project-tags">
                                     <span class="tag">Web Development (HTML/CSS/JS | MySQL/Postman)</span>
                                     <span class="tag">Unity (C#, PandaBT, Multiplayer)</span>
@@ -335,6 +362,19 @@
                 </div>
                 <div class="modal-pdf">
                     <iframe src="Testimonials/testimonial2.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+        <!--warning my portfolio nt complete!!-->
+        <div class="modal" id="modal-info">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <span class="modal-title">Notice some links lead to nowhere?</span>
+                    <button class="modal-close" onclick="closeModal('modal-info')">✕</button>
+                </div>
+                <div class="modal-desc">
+                <p>This portfolio is currently a work in progress, and I am in the process of updating it with more projects and details. Some links may lead to placeholder pages or incomplete sections as I continue to build out the content.</p>
+                <p>Check out: <strong> 01 - LionsBot</strong></p>
                 </div>
             </div>
         </div>

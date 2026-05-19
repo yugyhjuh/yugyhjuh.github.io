@@ -308,6 +308,7 @@ body {
   transform: scale(1.68);
 }
 
+
 #project-lyf:hover .project-image::after {
   opacity: 1;
 }
@@ -980,4 +981,19 @@ body {
   .image-grid { grid-template-columns: 1fr; }
   .grid-image.wide { grid-column: span 1; }
   .outcome-grid { grid-template-columns: 1fr; }
+}
+
+/*wip in case i cant finish in time..*/
+.nav-info {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ff0000;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-info:hover {
+  color: #c8b89a;
 }

@@ -292,3 +292,20 @@ window.addEventListener('DOMContentLoaded', () => {
     track.style.height = slides[0].scrollHeight + 'px';
   }
 });
+
+//modal popup on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modal-info");
+
+  if (modal) {
+    modal.classList.add("active");
+  }
+});
+
+function openModal(id) {
+  document.getElementById(id)?.classList.add("active");
+}
+
+function closeModal(id) {
+  document.getElementById(id)?.classList.remove("active");
+}
