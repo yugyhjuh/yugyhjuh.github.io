@@ -264,3 +264,31 @@ function scrollCarousel(direction) {
     behavior: 'smooth'
   });
 }
+
+let currentSlide = 0;
+
+function scrollIteration(direction) {
+  const carousel = document.getElementById('iterationCarousel');
+  const track = carousel.parentElement;
+  if (!carousel) return;
+  
+  const slides = carousel.querySelectorAll('.iteration-slide');
+  currentSlide = Math.max(0, Math.min(currentSlide + direction, slides.length - 1));
+  
+  carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+  carousel.style.transition = 'transform 0.4s ease';
+
+  //match track height to current slide height
+  track.style.height = slides[currentSlide].scrollHeight + 'px';
+}
+
+//set initial height on load
+window.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.getElementById('iterationCarousel');
+  if (!carousel) return;
+  const track = carousel.parentElement;
+  const slides = carousel.querySelectorAll('.iteration-slide');
+  if (slides.length > 0) {
+    track.style.height = slides[0].scrollHeight + 'px';
+  }
+});

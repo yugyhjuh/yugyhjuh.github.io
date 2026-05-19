@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Lionsbot: Bed-making Assist Device</title>
+        <title>LionsBot: Bed-making Assist Device</title>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -18,7 +19,7 @@
                         <span class="badge">School</span>
                         <span class="badge">Client</span>
                     </div>
-                    <h1 class="project-name">Lionsbot:<br>Bed-making<br>Assist Device</h1>
+                    <h1 class="project-name">LionsBot:<br>Bed-making<br>Assist Device</h1>
                     <div class="meta-block">
                         <div class="meta-item">
                             <div class="meta-label">Timeline</div>
@@ -26,11 +27,11 @@
                         </div>
                         <div class="meta-item">
                             <div class="meta-label">Client</div>
-                            <div class="meta-value">Lionsbot International</div>
+                            <div class="meta-value">LionsBot International Pte Ltd</div>
                         </div>
                         <div class="meta-item">
                             <div class="meta-label">Context</div>
-                            <div class="meta-value">School project — SUTD</div>
+                            <div class="meta-value">School project - SUTD</div>
                         </div>
                         <div class="meta-item">
                             <div class="meta-label">Tools</div>
@@ -47,15 +48,21 @@
             <!-- RIGHT: scrolling -->
             <div class="right">
             <!--main pic-->
-                <div class="hero">
-                <img src="Images/#" alt="Lionsbot hero" />
+                <div class="image-grid" style="margin-bottom: 12px;">
+                    <div class="grid-image">
+                        <video src="Images/lifty_showcase.mp4" controls muted loop playsinline style="width:100%;height:100%;object-fit:contain;"></video>
+                    </div>
+                    <div class="grid-image">
+                        <video src="Images/lifty_showcase2.mp4" controls muted loop playsinline style="width:100%;height:100%;object-fit:contain;"></video>
+                    </div>
                 </div>
+                <p style="font-size: 12px; color: #6e6e6e; margin-bottom: 36px; letter-spacing: 0.06em;">*Video editing, AI image generation (Midjourney) and AI voiceover by teammates.</p>
             <!-- overview-->
                 <div class="section">
                     <div class="section-label">Overview</div>
                     <div class="section-text">
-                        <p>problem, context .. overview</p>
-                        <p>challenges?</p>
+                        <p>Our team was tasked with addressing the difficulties of hotel bed-making, with hotel housekeepers as our key stakeholders. Through user research and collaborative data collection across groups, we identified bed tucking as the primary cause of back pain and chose to focus on assisting rather than replacing housekeepers in this process.</p>
+                        <p>LIFTY is designed to slide under the mattress and tuck bedsheets autonomously at each corner. It uses mecanum wheels for tight corner navigation and ball bearings on the mattress-facing surface for smooth movement. Touch sensors on its sides detect the housekeeper's grip, allowing them to guide the device with minimal effort - eliminating the need to bend, lift, and tuck repeatedly at each angle.</p>
                     </div>
                 </div>
             <!--my role-->
@@ -64,67 +71,133 @@
                     <div class="role-list">
                         <div class="role-item">
                             <span class="role-num">01</span>
-                            <span class="role-text"><strong>3D Modelling & Animation</strong> - Modelled the full product in Blender, produced camera animation and exploded view renders.</span>
+                            <span class="role-text"><strong>3D Modelling & Animation</strong> - Designed and modelled the product in Blender, producing camera animations and exploded view renders to showcase functionality and design intent.</span>
                         </div>
                         <div class="role-item">
                             <span class="role-num">02</span>
-                            <span class="role-text"><strong>Arduino Programming</strong> - Programmed control logic and user input handling.</span>
+                            <span class="role-text"><strong>Arduino Programming</strong> - Programmed its control logic and user input handling for the physical prototype.</span>
                         </div>
                         <div class="role-item">
                             <span class="role-num">03</span>
-                            <span class="role-text"><strong>Electronics Integration</strong> - Assisted with integrating electronic components into the mechanical design.</span>
+                            <span class="role-text"><strong>Electronics Integration</strong> - Tested and wired individual components before integration, focusing on the actuator controls, power supply, and wheel calibration.</span>
                         </div>
                     </div>
                 </div>
                 <!-- Process -->
                 <div class="section">
-                    <div class="section-label">Process</div>
-                    <div class="image-grid">
-                        <div class="grid-image">
-                            <div class="placeholder">Sketch / Ideation</div>
+                    <div class="section-label" style="margin-bottom: 12px;">Design Iterations
+                        <div style="display:flex; gap:8px; margin-left: auto;">
+                            <button class="carousel-btn" onclick="scrollIteration(-1)">←</button>
+                            <button class="carousel-btn" onclick="scrollIteration(1)">→</button>
                         </div>
-                        <div class="grid-image">
-                            <div class="placeholder">Early prototype</div>
-                        </div>
-                        <div class="grid-image wide">
-                            <div class="placeholder">Development</div>
+                    </div>
+                    <div class="carousel-wrapper">
+                        <div class="iteration-track">
+                            <div class="iteration-carousel" id="iterationCarousel">
+                                <!-- Iteration 1 & 2 -->
+                                <div class="iteration-slide">
+                                    <div class="section-text" style="margin-bottom: 12px;">
+                                        <p><strong>Iteration 1 & 2</strong> - Early concepts focused on lifting the mattress and clamping it to secure the sheet during tucking. Iteration 1 used a flat platform while Iteration 2 introduced a scissor-lift for better stability - preferred as the flat platform required excessive clearance height when fully lowered.</p>
+                                        <p>A top-mounted sensor was added to track the housekeeper's position and move the device accordingly. However, we identified a key limitation: repositioning after lifting caused previously tucked sheets to come undone, making this approach counterproductive.</p>
+                                        <p>Other design decisions included a detachable ramp for easier replacement and storage, and a cushioned surface for users to apply downward pressure comfortably. The side-button locking mechanism was later flagged as unintuitive and ergonomically challenging under load.</p>
+                                    </div>
+                                    <div class="image-grid">
+                                        <div class="grid-image">
+                                            <video src="Images/lifty_lift1.mp4" controls muted loop playsinline style="width:100%;height:100%;object-fit:contain;"></video>
+                                        </div>
+                                        <div class="grid-image">
+                                            <video src="Images/lifty_lift2.mp4" controls muted loop playsinline style="width:100%;height:100%;object-fit:contain;"></video>
+                                        </div>
+                                        <div class="grid-image wide">
+                                            <img src="Images/iter1_archi.png" alt="iter1" />
+                                        </div>
+                                        </div>
+                                    </div>
+                                <!-- Iteration 3 & 4 (Finals) -->
+                                <div class="iteration-slide">
+                                    <div class="section-text" style="margin-bottom: 12px;">
+                                        <p><strong>Iteration 3 & 4 (Final)</strong> - Lifting was removed entirely as it proved redundant - if the device handles tucking, lifting the mattress beforehand is unnecessary. This allowed us to simplify the design and focus on what mattered most: reducing excessive bending for housekeepers.</p>
+                                        <p>Iteration 3 introduced a grip pattern at the holding area for better ergonomics, and replaced the side-button with a dovetail joint for the ramp locking mechanism. The dovetail's angled geometry creates a self-locking friction fit - more secure, simpler to use, and eliminating the ergonomic issue of needing to press and hold under load. However, feedback noted the overall form was too blocky and uncomfortable to hold.</p>
+                                        <p>Iteration 4 addressed this with a significantly rounder, more refined silhouette - improving grip comfort and giving the product a sleeker, more intentional aesthetic.</p>
+                                        <p>Key mechanical changes included swapping to mecanum wheels for effective corner navigation, and relocating touch sensors to the grip sides. This enables power-assisted movement - the housekeeper guides the device naturally, as they would a tucking tool, but with far less manual effort.</p>
+                                    </div>
+                                    <div class="image-grid">
+                                        <div class="grid-image wide">
+                                            <model-viewer
+                                            src="Images/lifty.glb"
+                                            alt="LIFTY 3D Model"
+                                            auto-rotate
+                                            camera-controls
+                                            camera-orbit="0deg 75deg 85%"
+                                            style="width:100%;height:100%;background-color:#0e0e0e;">
+                                            </model-viewer>
+                                        </div>
+                                        <div class="grid-image">
+                                            <model-viewer
+                                            src="Images/LIFTY_BASE.glb"
+                                            alt="LIFTY 3D Model"
+                                            auto-rotate
+                                            camera-controls
+                                            style="width:100%;height:100%;background-color:#0e0e0e;">
+                                            </model-viewer>
+                                        </div>
+                                        <div class="grid-image">
+                                            <model-viewer
+                                            animation-name=""
+                                            animation-loop="false"
+                                            src="Images/lifty_grip.glb"
+                                            alt="LIFTY 3D Model"
+                                            auto-rotate
+                                            camera-controls
+                                            style="width:100%;height:100%;background-color:#0e0e0e;">
+                                            </model-viewer>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- renders (nicest stuff put here) -->
-                <div class="section">
-                    <div class="section-label">Final Renders</div>
-                    <div class="image-grid">
-                        <div class="grid-image wide">
-                            <img src="Images/#" alt="Final render" />
+                <div class="section" style="margin-bottom: 12px;">
+                    <div class="section-label">Prototype</div>
+                    <div class="section-text">
+                        <p style="margin-bottom: 12px;">The prototype uses an Arduino Uno with 3 motor drivers - 2 for the wheel pairs and 1 for the linear actuator. Directional buttons control both the side wheels and actuator height, with worm gear motors driving the wheels.</p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <!-- left portrait-->
+                        <div class="grid-image" style="aspect-ratio: 3/4;">
+                            <img src="Images/grpphoto.jpg" alt="Team photo" />
                         </div>
-                        <div class="grid-image">
-                            <div class="placeholder">Render 2</div>
-                        </div>
-                        <div class="grid-image">
-                            <div class="placeholder">Render 3</div>
+                        <!-- right hori images -->
+                        <div style="display: flex; flex-direction: column; gap: 16px; height: 100%;">
+                            <div class="grid-image" style="flex: 0.9;">
+                                <img src="Images/prototype1.png" alt="Prototype 1" style="object-fit: cover; object-position: center top;" />
+                            </div>
+                            <div class="grid-image" style="height: 345px">
+                                <img src="Images/prototype2.png" alt="Prototype 2" style="object-fit: cover; object-position: center;" />
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- (learning) outcome -->
-                <div class="section">
+                <div class="section" style="margin-bottom: 12px;">
                     <div class="section-label">Outcome</div>
                     <div class="outcome-grid">
                         <div class="outcome-block">
                             <div class="outcome-label">Result</div>
-                            <div class="outcome-text">outcome?</div>
+                            <div class="outcome-text">LionsBot responded positively to the assistive design approach, noting a noticeable strength difference when using the prototype hands-on.</div>
                         </div>
                         <div class="outcome-block">
                             <div class="outcome-label">Key Learning</div>
-                            <div class="outcome-text">lessons learnt</div>
+                            <div class="outcome-text">Using a Mixamo character as a visual reference before prompting AI image tools significantly improved output accuracy - particularly for hand placement and ergonomic positioning.</div>
                         </div>
                         <div class="outcome-block">
                             <div class="outcome-label">Team</div>
-                            <div class="outcome-text">teammates</div>
+                            <div class="outcome-text">Team of 4 - SUTD-DAI Year 2<br>Module: Product Design Studio (PDS)</div>
                         </div>
                         <div class="outcome-block">
                             <div class="outcome-label">External Tools</div>
-                            <div class="outcome-text">blenderkit etc</div>
+                            <div class="outcome-text">BlenderKit (asset library), Mixamo, ChatGPT4.0 (Image generation), Sketchfab (Mechanum wheels & final sensors)</div>
                         </div>
                     </div>
                 </div>
