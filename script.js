@@ -317,3 +317,25 @@ function scrollSiteModel(direction) {
   const cardWidth = carousel.querySelector('.grid-image').offsetWidth + 12;
   carousel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
 }
+
+function switchTab(tab, btn) {
+    //swap active button
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    //swap active panel
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + tab).classList.add('active');
+
+    //so they dont get stuck invis
+    document.querySelectorAll('#panel-' + tab + ' .section').forEach(el => {
+        el.classList.add('visible');
+    });
+}
+
+//reveal default panel sections on load
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#panel-indiv .section').forEach(el => {
+        el.classList.add('visible');
+    });
+});
