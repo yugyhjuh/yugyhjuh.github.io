@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Design Thinking Innovation</title>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="layout">
+            <!-- LEFT: sticky -->
+            <div class="left">
+                <div class="left-top">
+                    <a href="index.html" class="back-link">Home</a>
+                    <div class="project-type-badge">
+                        <span class="badge">Group</span>
+                        <span class="badge">School</span>
+                    </div>
+                    <h1 class="project-name">DTI:<br>Bird Deterrence System</h1>
+                    <div class="meta-block">
+                        <div class="meta-item">
+                            <div class="meta-label">Timeline</div>
+                            <div class="meta-value">Jan 2025 - Apr 2025</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Context</div>
+                            <div class="meta-value">School project - SUTD</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Tools</div>
+                            <div class="tags-list">
+                                <span class="tag">Blender</span>
+                                <span class="tag">Unity (C#)</span>
+                                <span class="tag">Prototyping</span>
+                                <span class="tag">Arduino</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- RIGHT: scrolling -->
+            <div class="right">
+            <!--main pic-->
+                <div class="image-grid" style="margin-bottom: 12px;">
+                    <div class="project-image">
+                        <iframe
+                            class="project-video"
+                            src="https://www.youtube.com/embed/uPyGweD7dUU"
+                            title="Origaminah Demo"
+                            allow="autoplay; fullscreen"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            frameborder="0"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <p style="font-size: 12px; color: #6e6e6e; margin-bottom: 36px; letter-spacing: 0.06em;">*Video editing, wiring, physical prototype and mechanisms by teammates</p>
+            <!-- overview-->
+                <div class="section">
+                    <div class="section-label">Overview</div>
+                    <div class="section-text">
+                        <p>We were tasked with identifying a real issue within SUTD and focused on the recurring problem of birds entering the canteen and taking food. Through on-site observation and case studies, we confirmed frequent occurrences, including birds approaching food even in the presence of humans.</p>
+                        <p>The project explores a non-invasive deterrence system that maintains the open-air nature of the canteen while discouraging bird entry. It uses reflective origami-based structures along the perimeter, leveraging birds' aversion to reflective and visually disruptive materials. The design ensures no harm upon contact through lightweight, soft construction.</p>
+                        <p>The system is sensor-triggered, deploying or opening when bird presence is detected. Beyond function, it also acts as a potential environmental installation that transforms the perimeter into a dynamic visual display.</p>
+                    </div>
+                </div>
+            <!--my role-->
+                <div class="section">
+                    <div class="section-label">My Role</div>
+                    <div class="role-list">
+                        <div class="role-item">
+                            <span class="role-num">01</span>
+                            <span class="role-text"><strong>Site Model Development</strong> - Built a scaled spatial model of the canteen in Blender, using Mixamo human characters as reference to ensure accurate human-scale proportions and placement.</span>
+                        </div>
+                        <div class="role-item">
+                            <span class="role-num">02</span>
+                            <span class="role-text"><strong>Mechanism Testing & Integration Support</strong> - Tested components to determine wiring and placement requirements, and communicated connection guidelines for the electronics team to implement within the frame structure.</span>
+                        </div>
+                        <div class="role-item">
+                            <span class="role-num">03</span>
+                            <span class="role-text"><strong>Arduino Programming</strong> - Implemented and calibrated servo motors and PIR sensor input to control system activation and response behaviour.</span>
+                        </div>
+                        <div class="role-item">
+                            <span class="role-num">04</span>
+                            <span class="role-text"><strong>Simulation & Visualization (Unity)</strong> - Created a simple Unity scene using collision triggers and object tags to simulate system response when a bird is detected.</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Process -->
+                <div class="section">
+                    <div class="section-label" style="margin-bottom: 12px;">Site Model</div>
+                    <div class="carousel-wrapper">
+                        <div class="iteration-track">
+                            <div class="iteration-carousel" id="iterationCarousel">
+                                <!-- site model -->
+                                <div class="iteration-slide">
+                                    <!-- mini image carousel -->
+                                    <div style="position: relative; margin-bottom: 16px;">
+                                        <div id="siteModelCarousel" style="display: flex; gap: 12px; overflow: hidden; scroll-behavior: smooth;">
+                                            <div class="grid-image" style="flex: 0 0 40%; aspect-ratio: 4/3;">
+                                                <img src="Images/ori1.png" alt="Site model view 1" style="object-fit: contain;" />
+                                            </div>
+                                            <div class="grid-image" style="flex: 0 0 40%; aspect-ratio: 4/3;">
+                                                <img src="Images/ori2.png" alt="Site model view 2" style="object-fit: contain;" />
+                                            </div>
+                                            <div class="grid-image" style="flex: 0 0 40%; aspect-ratio: 4/3;">
+                                                <img src="Images/ori3.png" alt="Site model view 3" style="object-fit: contain;" />
+                                            </div>
+                                            <div class="grid-image" style="flex: 0 0 40%; aspect-ratio: 4/3;">
+                                                <video src="Images/Origaminah.mp4" controls muted loop playsinline style="width:100%;height:100%;object-fit:contain;"></video>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; gap: 8px; margin-top: 12px;">
+                                        <button class="carousel-btn" onclick="scrollSiteModel(-1)">←</button>
+                                        <button class="carousel-btn" onclick="scrollSiteModel(1)">→</button>
+                                        </div>
+                                    </div>
+                                <!-- 3d model below -->
+                                <div class="grid-image wide">
+                                    <model-viewer
+                                    src="Images/dti5.glb"
+                                    alt="3D Site Model"
+                                    auto-rotate
+                                    camera-controls
+                                    camera-orbit="0deg 75deg 60%"
+                                    style="width:100%;height:100%;background-color:#0e0e0e;">
+                                    </model-viewer>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" style="margin-bottom: 12px;">
+                    <div class="section-label">Prototype</div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <!-- left portrait-->
+                        <div class="grid-image" style="aspect-ratio: 3/4;">
+                            <img src="Images/orip.jpg" alt="prototype" />
+                        </div>
+                        <!-- right hori images -->
+                        <div style="display: flex; flex-direction: column; gap: 16px; height: 100%;">
+                            <div class="grid-image" style="flex: 0.9;">
+                                <img src="Images/orif.jpg" alt="folding" style="object-fit: cover; object-position: center top;" />
+                            </div>
+                            <div class="grid-image" style="height: 345px">
+                                <video src="Images/ori_test.mp4" controls muted loop playsinline style="width:100%;height:100%;object-fit:contain;"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- (learning) outcome -->
+                <div class="section" style="margin-bottom: 12px;">
+                    <div class="section-label">Outcome</div>
+                    <div class="outcome-grid">
+                        <div class="outcome-block">
+                            <div class="outcome-label">Result</div>
+                            <div class="outcome-text">Awarded Sustainability Practice Prize for <br>Design Thinking & Innovation 2025</div>
+                        </div>
+                        <div class="outcome-block">
+                            <div class="outcome-label">Key Learning</div>
+                            <div class="outcome-text">Learned Arduino fundamentals, including wiring, sensor integration, and servo motor control</div>
+                        </div>
+                        <div class="outcome-block">
+                            <div class="outcome-label">Team</div>
+                            <div class="outcome-text">Team of 5 - SUTD-Freshmore Year 1<br>Module: Design Thinking & Innovation (DTI)</div>
+                        </div>
+                        <div class="outcome-block">
+                            <div class="outcome-label">External Tools</div>
+                            <div class="outcome-text">Mixamo, Sketchfab (Food tray)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

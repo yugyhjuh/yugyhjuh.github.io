@@ -309,3 +309,11 @@ function openModal(id) {
 function closeModal(id) {
   document.getElementById(id)?.classList.remove("active");
 }
+
+//mini carousel for site model section
+function scrollSiteModel(direction) {
+  const carousel = document.getElementById('siteModelCarousel');
+  if (!carousel) return;
+  const cardWidth = carousel.querySelector('.grid-image').offsetWidth + 12;
+  carousel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+}
