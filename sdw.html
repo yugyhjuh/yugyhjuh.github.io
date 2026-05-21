@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Spatial Design Studio</title>
+        <title>Spatial Design World</title>
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
@@ -19,7 +19,7 @@
                         <span class="badge">Group</span>
                         <span class="badge">School</span>
                     </div>
-                    <h1 class="project-name">Spatial<br>Design<br>Studio</h1>
+                    <h1 class="project-name">Spatial Design World</h1>
                     <div class="meta-block">
                         <div class="meta-item">
                             <div class="meta-label">Timeline</div>
@@ -46,10 +46,12 @@
                     <button class="tab-btn active" onclick="switchTab('indiv', this)">Individual</button>
                     <button class="tab-btn" onclick="switchTab('grp', this)">Group</button>
                 </div>
+
                 <!-- indiv panel -->
                 <div class="tab-panel active" id="panel-indiv">
-                    <div class="section-label">Overview</div>
-                    <!-- gifs -->
+                    <div class="section-label">Narrated Drawings</div>
+                    <p style="font-size: 13px; color: #b8b4b0; margin-bottom: 24px;">Animated GIFs that narrate movement through the space.</p>
+                    <!-- GIFs -->
                     <div class="gif-pair section">
                         <div class="grid-image">
                             <img src="Images/EXE1.gif" alt="Exercise 1 overview" />
@@ -58,41 +60,72 @@
                             <img src="Images/EXE2.gif" alt="Exercise 2 overview" />
                         </div>
                     </div>
-                    <!-- exercises ,, the pics very pixelated... try find a fix for this-->
+                    <!-- Exercises -->
                     <div class="section-label">Exercises</div>
                     <div class="section">
+                        <!-- Exercise 01 -->
                         <div class="img-text-row">
                             <div class="grid-image">
-                                <img src="Images/EXE1.jpg" alt="Exercise 1" />
+                                <img src="Images/exe1.png" alt="Exercise 01" style="object-fit: cover;" />
                             </div>
                             <div class="img-text-body">
                                 <div class="img-text-label">Exercise 01</div>
                                 <div class="img-text-title">Floor Plan</div>
-                                <p class="img-text-desc">floor plan of my own home w chiko</p>
+                                <p class="img-text-desc">My personal space as a case study - the room was measured and drafted as a scale-true floor plan in Rhino, with lineweight discipline and a black & white palette. Captures how I inhabit the space through daily activities like eating, gaming, and interacting with my cat.</p>
+                                <p class="caption" style="margin-top: 8px;">Lineweights are not accurately represented in the exported PDF.</p>
+                                <div class="testimonial-card" onclick="openModal('modal-exe1')" style="margin-top: 16px;">
+                                    <div class="testimonial-icon">PDF</div>
+                                    <div class="testimonial-info">
+                                        <span class="testimonial-name">Exercise 01</span>
+                                        <span class="testimonial-role">Floor Plan - Rhino 7</span>
+                                    </div>
+                                    <span class="testimonial-open">View →</span>
+                                </div>
                             </div>
                         </div>
+                        <!-- Exercise 02 -->
                         <div class="img-text-row">
                             <div class="grid-image">
-                                <img src="Images/EXE2.jpg" alt="Exercise 2" />
+                                <img src="Images/exe2.png" alt="Exercise 02" style="object-fit: cover;" />
                             </div>
                             <div class="img-text-body">
                                 <div class="img-text-label">Exercise 02</div>
                                 <div class="img-text-title">Interior Spatial Representation</div>
-                                <p class="img-text-desc">steal miro board desc lol</p>
+                                <p class="img-text-desc">Starting from the same personal space, the brief shifted to 3D representation - modelled in Rhino using referenced DWG assets, then flattened with Make2D into an exploded axonometric with section cuts. Proposed modifications include a rotating TV wall cutout, bifold doors to free up circulation, and an S-shaped sofa with a low floor table for flexible social use.</p>
+                                <p class="caption" style="margin-top: 8px;">Lineweights are not accurately represented in the exported PDF.</p>
+                                <div class="testimonial-card" onclick="openModal('modal-exe2')" style="margin-top: 16px;">
+                                    <div class="testimonial-icon">PDF</div>
+                                    <div class="testimonial-info">
+                                        <span class="testimonial-name">Exercise 02</span>
+                                        <span class="testimonial-role">Interior Spatial Representation - Rhino 7</span>
+                                    </div>
+                                    <span class="testimonial-open">View →</span>
+                                </div>
                             </div>
                         </div>
+                        <!-- Exercise 03 -->
                         <div class="img-text-row">
                             <div class="grid-image">
-                                <img src="Images/EXE3.jpg" alt="Exercise 3" />
+                                <img src="Images/exe3.png" alt="Exercise 03" style="object-fit: cover;" />
                             </div>
                             <div class="img-text-body">
                                 <div class="img-text-label">Exercise 03</div>
                                 <div class="img-text-title">Context Expansion</div>
-                                <p class="img-text-desc">room to block to city (copy miro also pls lol)</p>
+                                <p class="img-text-desc">Expanding outward from room to block to city, GIS building data was imported into Rhino to generate accurate 3D massing of the surrounding neighbourhood. My HDB block is mapped onto the existing geometry, situating my apartment within its broader street and city context.</p>
+                                <p class="caption" style="margin-top: 8px;">Lineweights are not accurately represented in the exported PDF.</p>
+                                <div class="testimonial-card" onclick="openModal('modal-exe3')" style="margin-top: 16px;">
+                                    <div class="testimonial-icon">PDF</div>
+                                    <div class="testimonial-info">
+                                        <span class="testimonial-name">Exercise 03</span>
+                                        <span class="testimonial-role">Context Expansion - Rhino 7</span>
+                                    </div>
+                                    <span class="testimonial-open">View →</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <!-- grp panel -->
                 <div class="tab-panel" id="panel-grp">
                     <!-- hero -->
@@ -107,47 +140,36 @@
                         <div class="role-list">
                             <div class="role-item">
                                 <span class="role-num">01</span>
-                                <span class="role-text"><strong>Mass Iterations</strong> - Generated design iterations in Rhino, exploring form and spatial configurations ... to figure out the structure?</span>
+                                <span class="role-text"><strong>Mass Iterations</strong> - Explored structural form through constrained 3-line compositions, blocking out spatial configurations for the site.</span>
                             </div>
                             <div class="role-item">
                                 <span class="role-num">02</span>
-                                <span class="role-text"><strong>AI Video & Clip Generation</strong> - Used FORMAS.AI to produce generative visualisations and clip outputs FOR FINAL VIDEO THIGY</span>
+                                <span class="role-text"><strong>AI Video & Clip Generation</strong> - Used FORMAS.AI to produce generative visualisations and clip outputs for the video showcase.</span>
                             </div>
                         </div>
                     </div>
-                    <!-- iter -->
+                    <!-- iterations -->
                     <div class="section">
                         <div class="section-label">Mass Iterations</div>
-                        <div class="mass-grid">
-                            <div class="grid-image"><img src="Images/#" alt="Iteration 1" /></div>
-                            <div class="grid-image"><img src="Images/#" alt="Iteration 2" /></div>
-                            <div class="grid-image"><img src="Images/#" alt="Iteration 3" /></div>
-                            <div class="grid-image"><img src="Images/#" alt="Iteration 4" /></div>
-                            <div class="grid-image"><img src="Images/#" alt="Iteration 5" /></div>
-                            <div class="grid-image"><img src="Images/#" alt="Iteration 6" /></div>
+                        <div class="mass-iter-grid">
+                            <div class="grid-image" style="aspect-ratio: 16/9;"><img src="Images/m1.png" alt="Iteration 1" /></div>
+                            <div class="grid-image" style="aspect-ratio: 16/9;"><img src="Images/m3.png" alt="Iteration 2" /></div>
+                            <div class="grid-image mass-iter-final"><img src="Images/m2.png" alt="Final iteration" /></div>
                         </div>
                     </div>
-                    <!-- AI -->
+                    <!-- AI generation -->
                     <div class="section">
                         <div class="section-label">AI Generation</div>
                         <div class="clip-row">
-                            <div class="grid-image">
-                                <video src="Images/#" controls muted loop playsinline></video>
-                            </div>
-                            <div class="grid-image">
-                                <video src="Images/#" controls muted loop playsinline></video>
-                            </div>
+                            <div class="grid-image"><video src="Images/#" controls muted loop playsinline></video></div>
+                            <div class="grid-image"><video src="Images/#" controls muted loop playsinline></video></div>
                         </div>
                         <div class="clip-row">
-                            <div class="grid-image">
-                                <video src="Images/#" controls muted loop playsinline></video>
-                            </div>
-                            <div class="grid-image">
-                                <video src="Images/#" controls muted loop playsinline></video>
-                            </div>
+                            <div class="grid-image"><video src="Images/#" controls muted loop playsinline></video></div>
+                            <div class="grid-image"><video src="Images/#" controls muted loop playsinline></video></div>
                         </div>
                     </div>
-                    <!-- (learning) outcome -->
+                    <!-- outcome -->
                     <div class="section" style="margin-bottom: 12px;">
                         <div class="section-label">Outcome</div>
                         <div class="outcome-grid">
@@ -157,21 +179,58 @@
                             </div>
                             <div class="outcome-block">
                                 <div class="outcome-label">Key Learning</div>
-                                <div class="outcome-text">Learned Rhino!</div>
+                                <div class="outcome-text">Learned Rhino from scratch - modelling, Make2D, lineweight discipline, and working with GIS data for urban-scale drawing.</div>
                             </div>
                             <div class="outcome-block">
                                 <div class="outcome-label">Team</div>
-                                <div class="outcome-text">Team of 5 - SUTD-Freshmore Year 1<br>Module: Spatial Design World (SDW)</div>
+                                <div class="outcome-text">Team of 5 — SUTD Year 2<br>Module: Spatial Design World (SDW)</div>
                             </div>
                             <div class="outcome-block">
                                 <div class="outcome-label">External Tools</div>
-                                <div class="outcome-text">???</div>
+                                <div class="outcome-text">FORMAS.AI</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- PDF modals -->
+        <div class="modal" id="modal-exe1">
+            <div class="modal-box modal-box-pdf">
+                <div class="modal-header">
+                    <span class="modal-title">Exercise 01 - Floor Plan</span>
+                    <button class="modal-close" onclick="closeModal('modal-exe1')">✕</button>
+                </div>
+                <div class="modal-pdf">
+                    <iframe src="Images/EXE1.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal-exe2">
+            <div class="modal-box modal-box-pdf">
+                <div class="modal-header">
+                    <span class="modal-title">Exercise 02 - Interior Spatial Representation</span>
+                    <button class="modal-close" onclick="closeModal('modal-exe2')">✕</button>
+                </div>
+                <div class="modal-pdf">
+                    <iframe src="Images/EXE2.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal-exe3">
+            <div class="modal-box modal-box-pdf">
+                <div class="modal-header">
+                    <span class="modal-title">Exercise 03 - Context Expansion</span>
+                    <button class="modal-close" onclick="closeModal('modal-exe3')">✕</button>
+                </div>
+                <div class="modal-pdf">
+                    <iframe src="Images/EXE3.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+
         <script src="script.js"></script>
+        <script src="sdw.js"></script>
     </body>
 </html>
