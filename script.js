@@ -339,3 +339,19 @@ window.addEventListener('DOMContentLoaded', () => {
         el.classList.add('visible');
     });
 });
+
+const trigger = document.querySelector('.hover-trigger');
+const tooltip = document.getElementById('custom-tooltip');
+
+//tooltip follows cursor on hover
+trigger.addEventListener('mousemove', (e) => {
+  tooltip.style.display = 'block';
+  // e.pageX and e.pageY get the exact cursor coordinates
+  tooltip.style.left = (e.clientX + 14) + 'px';
+  tooltip.style.top = (e.clientY + 14) + 'px';
+});
+
+//hide
+trigger.addEventListener('mouseleave', () => {
+  tooltip.style.display = 'none';
+});

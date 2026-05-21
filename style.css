@@ -1238,6 +1238,34 @@ body {
   gap: 12px;
 }
 
+/*lyfff*/
+.lyf-sketch-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+}
+ 
+.lyf-sketch-wide {
+  grid-row: span 2;
+  aspect-ratio: 3/4;
+}
+
+.lyf-art-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/*hide tooltips by default, will be shown via js on hover*/
+.tooltip {
+  display: none;
+  position: fixed;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+
 /*responsive ui for mobile*/
 @media (max-width: 768px) {
   .layout { grid-template-columns: 1fr; }
@@ -1268,6 +1296,9 @@ body {
   .vz-rsaf-grid                 { grid-template-columns: 1fr 1fr; }
   .esp-ss-grid    { grid-template-columns: 1fr; }
   .esp-model-grid { grid-template-columns: 1fr 1fr; }
+  .lyf-sketch-grid { grid-template-columns: 1fr 1fr; }
+  .lyf-sketch-wide { grid-row: span 1; aspect-ratio: 4/3; }
+  .lyf-art-grid    { grid-template-columns: repeat(3, 1fr); }
 }
 
 /*wip in case i cant finish in time..*/
