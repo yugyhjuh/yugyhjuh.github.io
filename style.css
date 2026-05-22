@@ -1131,6 +1131,17 @@ body {
   overflow: hidden;
   margin-bottom: 16px;
 }
+
+.vz-hero-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.vz-hero-row .vz-hero {
+  margin-bottom: 0;
+}
  
 .vz-hero img {
   width: 100%;
@@ -1151,6 +1162,30 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-bottom: 12px;
+}
+
+.vz-level-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: start;
+}
+
+.vz-asset-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.vz-asset-grid .grid-image {
+  aspect-ratio: 4/3;
+  background-color: #0e0e0e;
+}
+
+@media (max-width: 768px) {
+  .vz-asset-grid { grid-template-columns: repeat(2, 1fr); }
 }
  
 /*divider*/
