@@ -1338,7 +1338,6 @@ body {
   z-index: 1000;
 }
 
-
 /*responsive ui for mobile*/
 @media (max-width: 768px) {
   .layout { grid-template-columns: 1fr; }
