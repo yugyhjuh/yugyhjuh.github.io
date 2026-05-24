@@ -1321,13 +1321,34 @@ body {
  
 .lyf-sketch-wide {
   grid-row: span 2;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/1;
 }
 
 .lyf-art-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
+}
+
+.lyf-chicken-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.lyf-square {
+  aspect-ratio: 1/1;
+  background-color: #0e0e0e;
+}
+
+.lyf-proto-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.lyf-portrait {
+  aspect-ratio: 9/16;
 }
 
 /*hide tooltips by default, will be shown via js on hover*/
@@ -1371,6 +1392,8 @@ body {
   .lyf-sketch-grid { grid-template-columns: 1fr 1fr; }
   .lyf-sketch-wide { grid-row: span 1; aspect-ratio: 4/3; }
   .lyf-art-grid    { grid-template-columns: repeat(3, 1fr); }
+  .lyf-chicken-grid { grid-template-columns: repeat(3, 1fr); }
+  .lyf-proto-grid   { grid-template-columns: repeat(2, 1fr); }
 }
 
 /*wip in case i cant finish in time..*/
