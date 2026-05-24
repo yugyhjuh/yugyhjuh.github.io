@@ -265,6 +265,26 @@ function scrollCarousel(direction) {
   });
 }
 
+//exploration carousel display sideways
+function scrollCarousel(direction) {
+  const carousel = document.getElementById('personalCarousel');
+
+  if (!carousel) return;
+
+  const scrollAmount = carousel.clientWidth * 0.8;
+
+  carousel.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+
+function scrollModalImages(btn, direction) {
+  const strip = btn.parentElement.querySelector('.modal-scroll-x');
+  const slideWidth = strip.querySelector('.modal-slide').offsetWidth + 16;
+  strip.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
+}
+
 let currentSlide = 0;
 
 function scrollIteration(direction) {
