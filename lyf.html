@@ -46,6 +46,7 @@
 
             <!-- RIGHT: scrolling -->
             <div class="right">
+
                 <!-- overview -->
                 <div class="section-label">Overview</div>
                 <div class="section">
@@ -61,6 +62,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- my role -->
                 <div class="section">
                     <div class="section-label">My Role</div>
@@ -85,13 +87,13 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- concept sketches -->
                 <div class="section-label">Concept Sketches</div>
                 <div class="section">
                     <div class="section-text" style="margin-bottom: 20px;">
                         <p>Early ideation - layout sketches to establish visual direction before moving into final art production.</p>
                     </div>
-                    <!-- 1 wide sketch left, 2 smaller right -->
                     <div class="lyf-proto-grid">
                         <div class="grid-image lyf-portrait"><img src="Images/d2.png" alt="UI screen 2" style="object-fit: contain;" /></div>
                         <div class="grid-image lyf-portrait"><img src="Images/d3.png" alt="UI screen 3" style="object-fit: cover;" /></div>
@@ -99,6 +101,7 @@
                         <div class="grid-image lyf-portrait"><img src="Images/d4.png" alt="UI screen 4" style="object-fit: fill;" /></div>
                     </div>
                 </div>
+
                 <!-- final character design -->
                 <div class="section-label">Character Design</div>
                 <div class="section">
@@ -111,7 +114,7 @@
                         <div class="grid-image lyf-square"><img src="Images/c1.gif" alt="Chicken form 2" style="object-fit: contain;" /></div>
                         <div class="grid-image lyf-square"><img src="Images/c3.png" alt="Chicken form 3" style="object-fit: contain;" /></div>
                     </div>
-                    <!-- 6 ideation sketches -->
+                    <!-- ideation sketches -->
                     <div class="lyf-art-grid">
                         <div class="grid-image lyf-square"><img src="Images/cc1.png" alt="Chicken ideation 1" style="object-fit: cover;" /></div>
                         <div class="grid-image lyf-square"><img src="Images/cc2.png" alt="Chicken ideation 2" style="object-fit: contain;" /></div>
@@ -131,30 +134,83 @@
                     <div class="section-text" style="margin-bottom: 20px;">
                         <p>Final 2D game art produced in Krita - recyclable collectibles, obstacles, and UI elements.</p>
                     </div>
-                    <!-- all assets in one landscape png -->
                     <div class="grid-image wide" style="aspect-ratio: 16/9;">
                         <img src="Images/ca1.png" alt="All art assets" style="object-fit: contain; background-color: #0e0e0e;" />
                     </div>
                     <p class="caption">All assets created in Krita.</p>
                 </div>
+
                 <!-- ui prototype -->
                 <div class="section-label">UI Prototype</div>
                 <div class="section">
+
+                    <!-- prototype 01 -->
                     <div class="vz-client-header">
-                        <span class="vz-client-name">Gameplay Flow</span>
+                        <span class="vz-client-name">Prototype 01 - Initial Concept</span>
                         <span class="vz-client-line"></span>
-                        <a href="YOUR_XD_LINK" target="_blank" class="esp-proto-link">Try Prototype →</a>
                     </div>
-                    <div class="section-text" style="margin-bottom: 20px;">
-                        <p>Early-stage clickable prototype built in Adobe XD, covering the game's onboarding, main gameplay screen, and end-state flow.</p>
+                    <p class="img-text-desc" style="margin-bottom: 20px;">Original gameplay concept built around a food-catching face-filter mechanic with three states.</p>
+                    <!-- mode breakdown -->
+                    <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+                        <div>
+                            <span class="img-text-label">Normal</span>
+                            <p class="img-text-desc">Dumplings, LYF coins, and chickens fall at increasing speed. Catching a LYF coin triggers Fever Mode; catching a chicken triggers Chicken Mode.</p>
+                        </div>
+                        <div>
+                            <span class="img-text-label">Fever Mode</span>
+                            <p class="img-text-desc">5 seconds of bonus play triggered by the LYF coin, before a big chicken ends it and returns the game to Normal.</p>
+                        </div>
+                        <div>
+                            <span class="img-text-label">Chicken Mode</span>
+                            <p class="img-text-desc">Danger zone - eggs and garlic drop instead of dumplings. Eat an egg and you lose; eat enough garlic to chase the chicken away and return to Normal. The more times you enter this mode, the more garlic required.</p>
+                        </div>
                     </div>
-                    <!-- portrait 4-col grid for phone UI screenshots -->
-                    <div class="lyf-proto-grid">
-                        <div class="grid-image lyf-portrait"><img src="Images/#" alt="UI screen 1" style="object-fit: cover;" /></div>
-                        <div class="grid-image lyf-portrait"><img src="Images/#" alt="UI screen 2" style="object-fit: cover;" /></div>
-                        <div class="grid-image lyf-portrait"><img src="Images/#" alt="UI screen 3" style="object-fit: cover;" /></div>
-                        <div class="grid-image lyf-portrait"><img src="Images/#" alt="UI screen 4" style="object-fit: cover;" /></div>
+                    <!-- proto 1 gif -->
+                    <div style="display: flex; justify-content: center; margin-bottom: 48px;">
+                        <img src="Images/lyf1.gif"
+                            style="width: 75%; max-width: 700px; height: auto; object-fit: contain;" />
                     </div>
+                    <!-- proto2 -->
+                    <div class="vz-client-header">
+                        <span class="vz-client-name">Prototype 02 - Revised After Client Feedback</span>
+                        <span class="vz-client-line"></span>
+                    </div>
+                    <p class="img-text-desc" style="margin-bottom: 20px;">Client felt the dumpling theme had no connection to LYF or the sustainability brief - the mechanic was redesigned around their existing mural artwork and recyclable elements.</p>
+                    <!-- mode breakdown -->
+                    <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+                        <div>
+                            <span class="img-text-label">Normal</span>
+                            <p class="img-text-desc">Recyclable items, LYF coins, and clouds fall at increasing speed. Catching a LYF coin triggers Fever Mode; catching a cloud triggers Cloud Mode.</p>
+                        </div>
+                        <div>
+                            <span class="img-text-label">Fever Mode</span>
+                            <p class="img-text-desc">5 seconds of bonus play triggered by the LYF coin, before returning to Normal. Missing recyclables has no consequences.</p>
+                        </div>
+                        <div>
+                            <span class="img-text-label">Cloud Mode</span>
+                            <p class="img-text-desc">Danger zone - toxic garbage drops instead of recyclables. Collecting it causes a loss. Survive 10 seconds to return to Normal.</p>
+                        </div>
+                    </div>
+                    <!-- proto 2 gif -->
+                    <div style="display: flex; justify-content: center; margin-bottom: 48px;">
+                        <img src="Images/lyf2.gif"
+                            style="width: 75%; max-width: 700px; height: auto; object-fit: contain;" />
+                    </div>
+                    <!-- gameplay videos -->
+                    <div class="vz-client-header">
+                        <span class="vz-client-name">Final Gameplay</span>
+                        <span class="vz-client-line"></span>
+                    </div>
+                    <p class="img-text-desc" style="margin-bottom: 16px;">Final gameplay recordings of the AR filter in action. Features reduced due to time and SparkAR limitations however, the core gameplay concept is kept.</p>
+                    <div style="display: flex; justify-content: center; gap: 12px;">
+                        <div class="grid-image lyf-portrait" style="width: 260px; flex-shrink: 0;">
+                            <video src="Images/gameplay1.mp4" controls muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video>
+                        </div>
+                        <div class="grid-image lyf-portrait" style="width: 260px; flex-shrink: 0;">
+                            <video src="Images/gameplay2.mp4" controls muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video>
+                        </div>
+                    </div>
+                    <p class = "caption">*SparkAR programming done by teammate</p>
                 </div>
             </div>
         </div>

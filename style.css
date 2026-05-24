@@ -488,6 +488,18 @@ body {
   margin-top: 80px;
 }
 
+.about-block {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.about-block p {
+  flex: 1;
+  max-width: 65ch;
+  line-height: 1.7;
+}
+
 /*testimonials*/
 .testimonials-grid {
   display: flex;
@@ -1351,6 +1363,40 @@ body {
   aspect-ratio: 9/16;
 }
 
+.tp-unity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.tp-unity-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #2a2a2a;
+  background-color: #111111;
+}
+
+.tp-maya-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tp-learned-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tp-learned-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid #1a1a1a;
+}
+
 /*hide tooltips by default, will be shown via js on hover*/
 .tooltip {
   display: none;
@@ -1394,6 +1440,8 @@ body {
   .lyf-art-grid    { grid-template-columns: repeat(3, 1fr); }
   .lyf-chicken-grid { grid-template-columns: repeat(3, 1fr); }
   .lyf-proto-grid   { grid-template-columns: repeat(2, 1fr); }
+  .tp-unity-grid   { grid-template-columns: 1fr; }
+  .tp-learned-grid { grid-template-columns: 1fr; }
 }
 
 /*wip in case i cant finish in time..*/
