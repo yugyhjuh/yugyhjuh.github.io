@@ -6,10 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>yugyhjuh</title>
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+
+        <!-- PSX BOOT SCREEN -->
+        <div id="psx-boot">
+            <div id="psx-boot-lines"></div>
+            <div class="psx-boot-bar-wrap" id="psx-bar-wrap">
+                <div class="psx-boot-bar-fill" id="psx-bar-fill"></div>
+            </div>
+            <div class="psx-boot-skip" onclick="psxSkipBoot()">SKIP ▶▶</div>
+        </div>
+
+        <!-- MAIN PORTFOLIO (hidden until boot finishes) -->
+        <div id="psx-portfolio" style="opacity:0;transition:opacity 0.8s ease;">
         <div class="layout">
             <!-- LEFT: sticky -->
             <div class="left">
@@ -22,6 +34,7 @@
                         <a href="#projects" class="active">Projects</a>
                         <a href="#personal">Explorations</a>
                         <a href="#about">About</a>
+                        <a href="#education">Education</a>
                         <a href="#testimonials">Testimonials</a>
                     </nav>
                 </div>
@@ -47,7 +60,7 @@
                     <div class="section-label">Projects</div>
                     <div class="projects">
                         <!-- Project 1 -->
-                        <a class="project-card" href="pds.html">
+                        <a class="project-card jewel-card" href="pds.html">
                             <div class="project-meta">
                                 <span class="project-number">01</span>
                                 <div class="project-tags">
@@ -64,7 +77,10 @@
                                 <span class="project-type">Client</span>
                             </div>
                             <div class="project-image">
-                                <img src="Images/Lifty.jpg" alt="Project 1" />
+                                <div class="jewel-spine"><span class="jewel-spine-text">PDS-001 · LIONSBOT BED-MAKING ASSIST</span></div>
+                                <div class="jewel-img-inner">
+                                    <img src="Images/Lifty.jpg" alt="Project 1" />
+                                </div>
                             </div>
                             <p class="project-desc">A power-assisted bed-tucking device designed to reduce physical strain on hotel housekeepers - designed to assist, not replace.</p>
                             <div class="project-footer">
@@ -73,7 +89,7 @@
                             </div>
                         </a>
                         <!-- Project 2 -->
-                        <a class="project-card" href="sdw.html">
+                        <a class="project-card jewel-card" href="sdw.html">
                             <div class="project-meta">
                                 <span class="project-number">02</span>
                                 <div class="project-tags">
@@ -89,7 +105,10 @@
                                 <span class="project-type">School</span>
                             </div>
                             <div class="project-image">
-                                <img class="project-video" src="Images/EXE2.jpg" alt="Project animation" style="width:100%;height:100%;object-fit:fill;">
+                                <div class="jewel-spine"><span class="jewel-spine-text">SDW-002 · FORMAS.AI SPATIAL DESIGN</span></div>
+                                <div class="jewel-img-inner">
+                                    <img class="project-video" src="Images/EXE2.jpg" alt="Project animation" style="width:100%;height:100%;object-fit:fill;">
+                                </div>
                             </div>
                             <p class="project-desc">Explored compact spatial planning through Rhino floor plans and 3D modelling, using AI-assisted ideation and visualisation to bring conceptual spaces to life.</p>
                             <div class="project-footer">
@@ -98,7 +117,7 @@
                             </div>
                         </a>
                         <!-- Project 3 -->
-                        <a class="project-card" href="dti.html">
+                        <a class="project-card jewel-card" href="dti.html">
                             <div class="project-meta">
                                 <span class="project-number">03</span>
                                 <div class="project-tags">
@@ -114,7 +133,10 @@
                                 <span class="project-type">School</span>
                             </div>
                             <div class="project-image">
-                                <video class="project-video" src="Images/Origaminah.mp4" muted loop playsinline></video>
+                                <div class="jewel-spine"><span class="jewel-spine-text">DTI-003 · ORIGAMINAH BIRD DETERRENCE</span></div>
+                                <div class="jewel-img-inner">
+                                    <video class="project-video" src="Images/Origaminah.mp4" muted loop playsinline></video>
+                                </div>
                             </div>
                             <p class="project-desc">Sensor-based bird deterrence system using reflective origami structures to prevent bird intrusion in open-air canteens without harm.</p>
                             <div class="project-footer">
@@ -123,7 +145,7 @@
                             </div>
                         </a>
                         <!-- Project 4 -->
-                        <a class="project-card" id="project-viziofly" href="viz.html">
+                        <a class="project-card jewel-card" id="project-viziofly" href="viz.html">
                             <div class="project-meta">
                                 <span class="project-number">04</span>
                                 <div class="project-tags">
@@ -140,7 +162,10 @@
                                 <span class="project-type">Client</span>
                             </div>
                             <div class="project-image">
-                                <img src="Images/Building.png" alt="Project 3" />
+                                <div class="jewel-spine"><span class="jewel-spine-text">VIZ-004 · VIZIOFLY METASCAPE CITY</span></div>
+                                <div class="jewel-img-inner">
+                                    <img src="Images/Building.png" alt="Project 3" />
+                                </div>
                             </div>
                             <p class="project-desc">3D modelling of Singapore buildings and game assets for Metascape City, alongside enemy level area design in Unity and client work for CNA and RSAF.</p>
                             <div class="project-footer">
@@ -149,7 +174,7 @@
                             </div>
                         </a>
                         <!-- Project 5 -->
-                        <a class="project-card"href="esp.html">
+                        <a class="project-card jewel-card" href="esp.html">
                             <div class="project-meta">
                                 <span class="project-number">05</span>
                                 <div class="project-tags">
@@ -165,7 +190,10 @@
                                 <span class="project-type">School</span>
                             </div>
                             <div class="project-image">
-                                <img src="Images/sp.png" alt="Project 4" />
+                                <div class="jewel-spine"><span class="jewel-spine-text">ESP-005 · ENGINEERING SIMULATION</span></div>
+                                <div class="jewel-img-inner">
+                                    <img src="Images/sp.png" alt="Project 4" />
+                                </div>
                             </div>
                             <p class="project-desc">Contributed as a UI artist, helping design interface systems for an interactive engineering simulation project featuring 3D assets and game-based learning.</p>
                             <div class="project-footer">
@@ -174,7 +202,7 @@
                             </div>
                         </a>
                         <!-- Project 6 -->
-                        <a class="project-card" id="project-lyf" href="lyf.html">
+                        <a class="project-card jewel-card" id="project-lyf" href="lyf.html">
                             <div class="project-meta">
                                 <span class="project-number">06</span>
                                 <div class="project-tags">
@@ -190,14 +218,10 @@
                                 <span class="project-type">Client</span>
                             </div>
                             <div class="project-image">
-                                <img src="Images/Lyf.jpg" alt="Project 4" />
-                                <!--<iframe
-                                    src="https://xd.adobe.com/view/753ef9f2-876f-4d55-903f-30b469f00bee-206d/?fullscreen"
-                                    width="100%"
-                                    height="100%"
-                                    frameborder="0"
-                                    allowfullscreen>
-                                </iframe>-->
+                                <div class="jewel-spine"><span class="jewel-spine-text">LYF-006 · ASCOTT AR GAME</span></div>
+                                <div class="jewel-img-inner">
+                                    <img src="Images/Lyf.jpg" alt="Project 4" />
+                                </div>
                             </div>
                             <p class="project-desc">Designed an AR game concept for Ascott Group's LYF One-North, aimed at engaging younger residents. Created illustrated assets and prototyped the gamified experience.</p>
                             <div class="project-footer">
@@ -205,8 +229,8 @@
                                 <span class="project-link">View Project</span>
                             </div>
                         </a>
-                        <!-- TP PROJECTS (make it one big pic on its own) -->
-                        <a class="project-card" id="project-tp" href="tp.html">
+                        <!-- Project 7 -->
+                        <a class="project-card jewel-card" id="project-tp" href="tp.html">
                             <div class="project-meta">
                                 <span class="project-number">07</span>
                                 <div class="project-tags">
@@ -229,7 +253,10 @@
                                 <span class="project-type">School</span>
                             </div>
                             <div class="project-image">
-                                <img src="Images/image.png" alt="Project 4" />
+                                <div class="jewel-spine"><span class="jewel-spine-text">TP-007 · TEMASEK POLY DEV PROJECTS</span></div>
+                                <div class="jewel-img-inner">
+                                    <img src="Images/image.png" alt="Project 4" />
+                                </div>
                             </div>
                             <p class="project-desc">This section covers most of the projects that I have done throughout my years in TP. It showcases most of the skills I had learnt.</p>
                             <div class="project-footer">
@@ -239,34 +266,36 @@
                         </a>
                     </div>
                 </section>
+
                 <!-- Personal Projects -->
                 <section id="personal" class="personal-section">
-                <div class="section-label">Explorations</div>
-                <div class="carousel-wrapper">
-                    <button class="carousel-btn carousel-prev" onclick="scrollCarousel(-1)">←</button>
-                    <div class="carousel" id="personalCarousel">
-                    <div class="personal-card" onclick="openModal('modal-personal-1')">
-                        <div class="personal-image">
-                            <img src="Images/ulu1.png" alt="Project 4" style="filter: brightness(175%);" />
+                    <div class="section-label">Explorations</div>
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn carousel-prev" onclick="scrollCarousel(-1)">←</button>
+                        <div class="carousel" id="personalCarousel">
+                            <div class="personal-card" onclick="openModal('modal-personal-1')">
+                                <div class="personal-image">
+                                    <img src="Images/ulu1.png" alt="Project 4" style="filter: brightness(175%);" />
+                                </div>
+                                <div class="personal-info">
+                                    <span class="personal-title">Jamsepticeye | Game Jam</span>
+                                    <span class="personal-open">View →</span>
+                                </div>
+                            </div>
+                            <div class="personal-card" onclick="openModal('modal-personal-3')">
+                                <div class="personal-image">
+                                    <img src="Images/hacko1.jpg" alt="Project 4" style="transform: scale(1.1);" />
+                                </div>
+                                <div class="personal-info">
+                                    <span class="personal-title">Hackomania 2025</span>
+                                    <span class="personal-open">View →</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="personal-info">
-                        <span class="personal-title">Jamsepticeye | Game Jam</span>
-                        <span class="personal-open">View →</span>
-                        </div>
+                        <button class="carousel-btn carousel-next" onclick="scrollCarousel(1)">→</button>
                     </div>
-                    <div class="personal-card" onclick="openModal('modal-personal-3')">
-                        <div class="personal-image">
-                            <img src="Images/hacko1.jpg" alt="Project 4" style="transform: scale(1.1);"  />
-                        </div>
-                        <div class="personal-info">
-                        <span class="personal-title">Hackomania 2025</span>
-                        <span class="personal-open">View →</span>
-                        </div>
-                    </div>
-                    </div>
-                    <button class="carousel-btn carousel-next" onclick="scrollCarousel(1)">→</button>
-                </div>
                 </section>
+
                 <!-- About -->
                 <section id="about" class="about-section">
                     <div class="section-label">About</div>
@@ -299,6 +328,73 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Education-->
+                <section id="education" class="about-section">
+                    <div class="section-label">Education</div>
+                    <div class="psx-save-screen">
+                        <div class="psx-save-header">
+                            <span class="psx-save-header-title">MEMORY CARD - LIFE 1</span>
+                            <span class="psx-save-header-sub">2 BLOCK USED</span>
+                        </div>
+                        <div class="psx-save-slots">
+                            <!-- SUTD slot -->
+                            <div class="psx-save-slot psx-save-selected" onclick="psxToggleBio(this)">
+                                <div class="psx-save-icon">
+                                    <img src="Images/#" alt="SUTD" />
+                                </div>
+                                <div class="psx-save-info">
+                                    <div class="psx-save-name">SINGAPORE UNIVERSITY OF TECHNOLOGY AND DESIGN</div>
+                                    <div class="psx-save-stats">
+                                        <span class="psx-save-stat">STATUS: <em>YEAR 3</em></span>
+                                        <span class="psx-save-stat">TIMELINE: <em>2024 - PRESENT</em></span>
+                                        <span class="psx-save-stat">DEGREE: <em>B.SC. DESIGN AND ARTIFICIAL INTELLIGENCE</em></span>
+                                        <span class="psx-save-stat">LOCATION: <em>SINGAPORE</em></span>
+                                        <span class="psx-save-stat psx-save-minors">MINORS: <em>Computer Science &nbsp;·&nbsp; Design, Technology & Society</em></span>
+                                    </div>
+                                </div>
+                                <div class="psx-save-timestamp">
+                                    2024 - 2028<br>YEAR 3
+                                </div>
+                            </div>
+                            <div class="psx-save-bio" id="psx-save-bio-sutd">
+                                <div class="psx-save-bio-label">// EDUCATION BIO</div>
+                                <p>Currently in my third year at SUTD where I work with different industry partners to push further into interactive systems, AI-assisted design, and physical prototyping - bridging the gap between how things look and how they work into real-world applications.</p>
+                            </div>
+
+                            <!-- TP slot -->
+                            <div class="psx-save-slot psx-save-selected" onclick="psxToggleBio(this)">
+                                <div class="psx-save-icon">
+                                    <img src="Images/#" alt="TP" />
+                                </div>
+                                <div class="psx-save-info">
+                                    <div class="psx-save-name">TEMASEK POLYTECHNIC</div>
+                                    <div class="psx-save-stats">
+                                        <span class="psx-save-stat">STATUS: <em>ALUMNI</em></span>
+                                        <span class="psx-save-stat">TIMELINE: <em>2021 - 2024</em></span>
+                                        <span class="psx-save-stat">DIPLOMA: <em>GAME DESIGN AND DEVELOPMENT</em></span>
+                                        <span class="psx-save-stat">LOCATION: <em>SINGAPORE</em></span>
+                                    </div>
+                                </div>
+                                <div class="psx-save-timestamp">
+                                    2021 - 2024<br>GRADUATED
+                                </div>
+                            </div>
+                            <div class="psx-save-bio" id="psx-save-bio-tp">
+                                <div class="psx-save-bio-label">// EDUCATION BIO</div>
+                                <p>This is where it all began. TP's GDD programme was my first real plunge into 3D, game engines, and the common field of infocomm technology.</p>
+                            </div>
+
+                            <!-- Empty slot -->
+                            <div class="psx-save-slot psx-save-empty">
+                                <div class="psx-save-icon psx-save-icon-empty">—</div>
+                                <div class="psx-save-info"><div class="psx-save-name psx-save-name-empty">— NO DATA —</div></div>
+                                <div class="psx-save-timestamp">EMPTY</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
                 <!-- Testimonials -->
                 <section id="testimonials" class="testimonials-section">
                     <div class="section-label">Testimonials</div>
@@ -323,7 +419,8 @@
                 </section>
             </div>
         </div>
-        <!-- Personal Proj POPUP 1 -->
+
+        <!-- MODALS (unchanged) -->
         <div class="modal" id="modal-personal-1">
             <div class="modal-box">
                 <div class="modal-header">
@@ -346,26 +443,16 @@
                         </div>
                         <p class="modal-desc" style="padding: 0;">Built for Jamsepticeye (theme: "Death is an Opportunity"), developed over roughly 24 hours with a team. Contributed to rapid game design ideation under a 3-hour concept-to-code sprint, handled all 3D modelling & Unity particle effects, and researched and implemented PSX-style shaders in Unity to achieve the retro visual aesthetic.</p>
                         <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px; padding-top: 12px; border-top: 1px solid #2a2a2a;">
-                            <a href="https://yugyhjuh.itch.io/ulu-within" target="_blank" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #c8b89a; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: gap 0.2s;">
-                                View on itch.io <span>↗</span>
-                            </a>
-                            <a href="https://github.com/yugyhjuh/Jamsepticeye" target="_blank" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #c8b89a; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: gap 0.2s;">
-                                View on GitHub <span>↗</span>
-                            </a>
+                            <a href="https://yugyhjuh.itch.io/ulu-within" target="_blank" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #c8b89a; text-decoration: none; display: flex; align-items: center; gap: 8px;">View on itch.io <span>↗</span></a>
+                            <a href="https://github.com/yugyhjuh/Jamsepticeye" target="_blank" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #c8b89a; text-decoration: none; display: flex; align-items: center; gap: 8px;">View on GitHub <span>↗</span></a>
                         </div>
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; padding: 0 24px; gap: 12px; border-top: 1px solid #2a2a2a;">
                     <button class="carousel-btn" onclick="scrollModalImages(this, -1)">←</button>
                     <div class="modal-scroll-x" style="flex: 1; padding: 24px 0;">
-                        <div class="modal-slide">                        
-                            <model-viewer src="Images/ps1_stylehdb.glb"
-                            alt="HDB Model"
-                            auto-rotate
-                            camera-controls
-                            camera-orbit="0deg 75deg 85%"
-                            style="width:100%;height:100%;background-color:#0e0e0e;transform: scale(1.3);">
-                            </model-viewer>
+                        <div class="modal-slide">
+                            <model-viewer src="Images/ps1_stylehdb.glb" alt="HDB Model" auto-rotate camera-controls camera-orbit="0deg 75deg 85%" style="width:100%;height:100%;background-color:#0e0e0e;transform: scale(1.3);"></model-viewer>
                         </div>
                         <div class="modal-slide"><img src="Images/ulu2.png" alt="Jamsepticeye | Game Jam" style="filter: brightness(175%);"/></div>
                         <div class="modal-slide"><img src="Images/ulu3.png" alt="Jamsepticeye | Game Jam" style="filter: brightness(175%);"/></div>
@@ -375,7 +462,7 @@
                 </div>
             </div>
         </div>
-        <!-- Personal Proj POPUP 3 -->
+
         <div class="modal" id="modal-personal-3">
             <div class="modal-box">
                 <div class="modal-header">
@@ -397,9 +484,7 @@
                         </div>
                         <p class="modal-desc" style="padding: 0;">Won 1st place at GeeksHacking Hackathon. Designed the main page UI for a community platform connecting geeks with shared interests IRL. Built an interactive interest-selection system in Unity where users pick their interests to match with like-minded others, and designed the main menu interface under a 24-hour sprint - including rebuilding progress after a laptop failure mid-jam.</p>
                         <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px; padding-top: 12px; border-top: 1px solid #2a2a2a;">
-                            <a href="https://github.com/Team-LASST/Geeks-n-Guilds" target="_blank" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #c8b89a; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: gap 0.2s;">
-                                View on GitHub <span>↗</span>
-                            </a>
+                            <a href="https://github.com/Team-LASST/Geeks-n-Guilds" target="_blank" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #c8b89a; text-decoration: none; display: flex; align-items: center; gap: 8px;">View on GitHub <span>↗</span></a>
                         </div>
                     </div>
                 </div>
@@ -413,7 +498,7 @@
                 </div>
             </div>
         </div>
-        <!-- Testimonial POPUP 1-->
+
         <div class="modal" id="modal-testimonial-1">
             <div class="modal-box modal-box-pdf">
                 <div class="modal-header">
@@ -425,7 +510,7 @@
                 </div>
             </div>
         </div>
-        <!-- Testimonial POPUP 2-->
+
         <div class="modal" id="modal-testimonial-2">
             <div class="modal-box modal-box-pdf">
                 <div class="modal-header">
@@ -437,7 +522,7 @@
                 </div>
             </div>
         </div>
-        <!--warning my portfolio nt complete!!-->
+
         <div class="modal" id="modal-info">
             <div class="modal-box">
                 <div class="modal-header">
@@ -445,12 +530,15 @@
                     <button class="modal-close" onclick="closeModal('modal-info')">✕</button>
                 </div>
                 <div class="modal-desc">
-                <p>This portfolio is currently a work in progress, and I am in the process of updating it with more projects and details.</p>
-                <br>
-                <p>WIP: <strong> 07 - TP Dev Projects</strong></p>
+                    <p>This portfolio is currently a work in progress, and I am in the process of updating it with more projects and details.</p>
+                    <br>
+                    <p>WIP: <strong>07 - TP Dev Projects</strong></p>
                 </div>
             </div>
         </div>
+
+        </div><!-- end #psx-portfolio -->
+
         <script src="script.js"></script>
     </body>
 </html>
