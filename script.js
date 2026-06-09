@@ -7,20 +7,10 @@ const psxBootLines = [
   { text: 'Memory Card (Life 1) OK', cls: 'psx-bl-green', delay: 900 },
   { text: 'Loading save data...', cls: '', delay: 1100, bar: true },
   { text: '\u00a0', cls: '', delay: 1900 },
-  { text: 'PROJECTS FOUND:      7', cls: 'psx-bl-amber', delay: 2000 },
-  { text: 'EXPLORATIONS:        2', cls: 'psx-bl-amber', delay: 2150 },
-  { text: 'TESTIMONIALS:        2', cls: 'psx-bl-amber', delay: 2300 },
-  { text: '\u00a0', cls: '', delay: 2450 },
-  { text: 'Launching portfolio...', cls: 'psx-bl-white', delay: 2950 },
+  { text: 'Launching portfolio...', cls: 'psx-bl-white', delay: 2000 },
 ];
 
 let psxBootTimers = [];
-
-function psxSkipBoot() {
-  psxBootTimers.forEach(clearTimeout);
-  psxBootTimers = [];
-  psxFinishBoot();
-}
 
 function psxFinishBoot() {
   const boot = document.getElementById('psx-boot');
