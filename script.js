@@ -76,7 +76,7 @@ function psxToggleBio(slotEl) {
 
 //dict
 const synonyms = {
-  'Blender': ['3d', 'model', 'animation', 'texture'],
+  'Blender': ['3d', 'model', 'modelling', 'animation', 'texture'],
   'Unity (C#)': ['game', 'gaming'],
   'iClone8': ['animation'],
   'CC4': ['3d', 'model'],
@@ -84,7 +84,8 @@ const synonyms = {
   'Photoshop': ['texture'],
   'Arduino': ['electronics', 'wiring', 'hardware'],
   'Adobe XD': ['ui', 'ux', 'ui/ux', 'hi-fidelity', 'low-fidelity', 'wireframe', 'hi-fi', 'lo-fi', 'user'],
-  'Krita': ['2d', 'concept art', 'art', 'drawing']
+  'Krita': ['2d', 'concept art', 'art', 'drawing'],
+  'Maya': ['3d', 'model', 'modelling', 'texture']
 };
 
 const searchInput = document.getElementById('searchInput');
