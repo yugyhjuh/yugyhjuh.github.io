@@ -40,6 +40,7 @@
                 <div class="left-bottom">
                     <a href="https://github.com/yugyhjuh" target="_blank">GitHub</a>
                     <a href="https://www.linkedin.com/in/stephanie-ho-241015216/" target="_blank">LinkedIn</a>
+                    <a href="https://www.instagram.com/kiwikia69/?hl=en" target="_blank">Blender Works Instagram</a>
                     <p class="status">Currently @ SUTD, Year 3, Term 5</p>
                 </div>
                 <!--<a href="javascript:void(0)" onclick="openModal('modal-info')" class="nav-info">
@@ -272,6 +273,15 @@
                     <div class="carousel-wrapper">
                         <button class="carousel-btn carousel-prev" onclick="scrollCarousel(-1)">←</button>
                         <div class="carousel" id="personalCarousel">
+                            <div class="personal-card" onclick="openModal('modal-personal-blender')">
+                                <div class="personal-image">
+                                    <img src="Images/phonebooth.png" alt="Blender Explorations" />
+                                </div>
+                                <div class="personal-info">
+                                    <span class="personal-title">Blender Explorations</span>
+                                    <span class="personal-open">View →</span>
+                                </div>
+                            </div>
                             <div class="personal-card" onclick="openModal('modal-personal-1')">
                                 <div class="personal-image">
                                     <img src="Images/ulu1.png" alt="Project 4" style="filter: brightness(175%);" />
@@ -492,6 +502,42 @@
                     <div class="modal-scroll-x" style="flex: 1; padding: 24px 0;">
                         <div class="modal-slide"><img src="Images/hacko.gif" alt="Hacko" /></div>
                         <div class="modal-slide"><img src="Images/hacko.png" alt="Hacko" /></div>
+                    </div>
+                    <button class="carousel-btn" onclick="scrollModalImages(this, 1)">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-personal-blender">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <span class="modal-title">Blender Explorations</span>
+                        <span style="font-size: 11px; color: #b8b4b0; letter-spacing: 0.08em;">Personal practice · Ongoing</span>
+                    </div>
+                    <button class="modal-close" onclick="closeModal('modal-personal-blender')">✕</button>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #2a2a2a;">
+                    <div class="personal-image" style="border-right: 1px solid #2a2a2a; aspect-ratio: 16/9;">
+                        <img src="Images/phonebooth.png" alt="Blender Explorations" />
+                    </div>
+                    <div style="padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+                        <p class="img-text-label">About</p>
+                        <div class="project-tags" style="justify-content: flex-start;">
+                            <span class="tag">Blender</span>
+                        </div>
+                        <p class="modal-desc" style="padding: 0;">Personal Blender work, done purely for fun - a space to mess around, try new methods, and explore lighting outside of coursework and client work.</p>
+                        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px; padding-top: 12px; border-top: 1px solid #2a2a2a;">
+                            <a href="https://www.instagram.com/kiwikia69/?hl=en" target="_blank" style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #c8b89a; text-decoration: none; display: flex; align-items: center; gap: 8px;">View on Instagram <span>↗</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; padding: 0 24px; gap: 12px; border-top: 1px solid #2a2a2a;">
+                    <button class="carousel-btn" onclick="scrollModalImages(this, -1)">←</button>
+                    <div class="modal-scroll-x" style="flex: 1; padding: 24px 0;">
+                        <!-- ==== STUDY 01 ==== -->
+                        <div class="modal-slide"><img src="Images/phonebooth.png" alt="Study 01 render" /></div>
+                        <div class="modal-slide"><img src="Images/0001-0060.gif" alt="Study 01 gif" /></div>
                     </div>
                     <button class="carousel-btn" onclick="scrollModalImages(this, 1)">→</button>
                 </div>
